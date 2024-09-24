@@ -16,7 +16,7 @@ const connect = async () =>{
 
      try{
         mongoose.connect(MONGODB_URI!,{
-            dbName:'event management api',
+            dbName:'event-management-api',
             bufferCommands:true
 
         });
