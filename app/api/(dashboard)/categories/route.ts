@@ -70,6 +70,8 @@ export const POST = async(request:Request) =>{
         })
 
         await newCategory.save()
+        return new NextResponse(JSON.stringify({message:"Category is created", category:newCategory}),{status:200})
+
     } catch (error:any) {
         return new NextResponse("Error in creating category" + error.message, {
             status: 500,
